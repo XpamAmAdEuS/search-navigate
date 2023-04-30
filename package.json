@@ -1,5 +1,8 @@
 {
   "name": "@xpamamadeus/search-navigate",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "1.0.0",
   "description": "This is a useSearch with navigate only function,original code from Tanstack router can be usefull in mpa.This its not router its just state for control search params",
   "author": "Miljenko Halapir",
