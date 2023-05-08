@@ -399,7 +399,7 @@ class Router<T> {
         },
       })),
       (this.state = this.__store.state),
-      (this.basepath = ""),
+      (this.basepath = window.location.pathname),
       this.update(t);
     let r = this.#buildLocation({ search: !0, state: !0 });
     this.state.latestLocation.href !== r.href && this.navigate({ ...r });
@@ -463,11 +463,11 @@ class Router<T> {
         ? this.state.latestLocation.state
         : S(t.state, this.state.latestLocation.state);
     return {
-      pathname: "/",
+      pathname: window.location.pathname,
       search: i,
       searchStr: u,
       state: C,
-      href: this.history.createHref(`/${u}`),
+      href: this.history.createHref(`${window.location.pathname}/${u}`),
     };
   };
   navigate = (t: any): void => {
@@ -488,6 +488,7 @@ function useSearch<T>(defaultValues: T,validateFunc: any ) {
   const router = new Router<T>({
     validateSearch: validateFunc,
     preSearchFilters: [(t: T) => ({ ...defaultValues, ...t })],
+    basepath: window.location.pathname
   });
   return {
     search: router.__store.state.currentLocation?.search,
