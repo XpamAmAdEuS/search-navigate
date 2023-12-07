@@ -6,23 +6,17 @@
   "version": "1.0.0",
   "description": "This is a useSearch with navigate only function,original code from Tanstack router can be usefull in mpa.This its not router its just state for control search params",
   "author": "Miljenko Halapir",
-  "files": ["dist"],
-  "type": "module",
-  "module": "./dist/search-navigate.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/search-navigate.js"
-    }
-  },
+  "files": ["/dist"],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build"
   },
   "devDependencies": {
-    "@types/node": "^18.16.3",
-    "typescript": "^5.0.4",
-    "vite": "^4.3.3",
-    "vite-plugin-dts": "^2.3.0"
+    "@types/node": "^20.10.3",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.6",
+    "vite-plugin-dts": "^3.6.4"
   }
 }

@@ -8,7 +8,7 @@ export default defineConfig({
             entry: resolve(__dirname, 'src/index.ts'),
             name: 'SearchNavigate',
             fileName: 'search-navigate',
-            formats: ['es'],
+            formats: ['umd'],
         },
     },
     plugins: [dts()],
